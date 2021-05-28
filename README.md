@@ -132,6 +132,8 @@ Method                                          | Description
 `range($value, $min, $max, $message = '')`      | Check that a value is within a range
 `inArray($value, array $values, $message = '')` | Check that a value is one of a list of values
 `oneOf($value, array $values, $message = '')`   | Check that a value is one of a list of values (alias of `inArray`)
+`implies($p, $q, $message = '')`                | Check that `$p` logically implies `$q` (i.e. _if_ `$p` is true, than `$q` must be true).
+
 
 ### String Assertions
 

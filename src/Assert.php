@@ -677,6 +677,20 @@ class Assert
     }
 
     /**
+     * @psalm-pure
+     *
+     * @param mixed $p
+     * @param mixed $q
+     * @param string $message
+     *
+     * @throws InvalidArgumentException
+     */
+    public static function implies($p, $q, $message = '')
+    {
+        self::true(!$p || $q, $message ?: 'Logical implication $p => $q did not hold.');
+    }
+
+    /**
      * @param mixed  $value
      * @param string $message
      *
