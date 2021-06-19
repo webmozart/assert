@@ -51,6 +51,12 @@ class AssertTest extends TestCase
     {
         $resource = self::getResource();
 
+        $nanList = array('key' => 2, NAN);
+        unset($nanList['key']);
+
+        $normalList = array('foo' => 'b', 3);
+        unset($normalList['foo']);
+
         return array(
             array('string', array('value'), true),
             array('string', array(''), true),
@@ -495,6 +501,8 @@ class AssertTest extends TestCase
             array('isList', array(array(false)), true),
             array('isList', array(array(array(1), array(2))), true),
             array('isList', array(array(array('foo' => 'bar'), array('baz' => 'tab'))), true),
+            array('isList', array($nanList), true),
+            array('isList', array($normalList), true),
             array('isNonEmptyList', array(array(1, 2, 3)), true),
             array('isNonEmptyList', array(array()), false),
             array('isNonEmptyList', array(array(0 => 1, 2 => 3)), false),
