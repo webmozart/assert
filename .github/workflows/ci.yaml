@@ -35,10 +35,11 @@ jobs:
             -   name: "Normalize composer.json"
                 run: "composer-normalize --dry-run"
 
-            - name: "PHP-CS-Fixer"
-              uses: "docker://oskarstark/php-cs-fixer-ga:2.18.0"
-              with:
-                args: "--dry-run --diff-format udiff"
+            -   name: "Install dependencies with composer"
+                run: "composer update --no-interaction --no-progress"
+
+            -   name: "Run php-cs-fixer"
+                run: "vendor/bin/php-cs-fixer fix --dry-run"
 
     static-code-analysis:
         name: "Static Code Analysis"
@@ -57,10 +58,10 @@ jobs:
                     php-version: "7.4"
 
             -   name: "Install dependencies with composer"
-                run: "composer update --no-interaction --no-progress && composer i --working-dir=ci"
+                run: "composer update --no-interaction --no-progress"
 
             -   name: "Run vimeo/psalm"
-                run: "ci/vendor/bin/psalm --threads=4"
+                run: "vendor/bin/psalm --threads=4"
 
     roave-bc-check:
         name: "Roave BC Check"
