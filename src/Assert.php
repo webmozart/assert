@@ -1912,6 +1912,24 @@ class Assert
     }
 
     /**
+     * @param $value
+     * @param string $format
+     * @param string $message
+     */
+    public static function isDateCorrect($value, $format = 'Y-m-d', $message = '') {
+        $dateTime = \DateTime::createFromFormat($format, $value);
+        $dateCorrect = $dateTime && $dateTime->format($format) === $value;
+
+        if (!$dateCorrect) {
+            static::reportInvalidArgument(\sprintf(
+                $message ?: 'Expected a date in format %s. Got: %s',
+                static::valueToString($format),
+                static::valueToString($value)
+            ));
+        }
+    }
+
+    /**
      * @psalm-param class-string<Throwable> $class
      *
      * @param Closure $expression
