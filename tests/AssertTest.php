@@ -733,6 +733,26 @@ class AssertTest extends TestCase
         call_user_func_array(array('Webmozart\Assert\Assert', $method), $args);
     }
 
+    public function testLazyExceptionMessage()
+    {
+        $exceptionMessage = 'Audax ususs ducunt ad historia.';
+
+        $isInit = false;
+
+        $thunk = function () use ($exceptionMessage, &$isInit) {
+            $isInit = true;
+
+            return $exceptionMessage;
+        };
+
+        Assert::string('', $thunk);
+        self::assertFalse($isInit);
+
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage($exceptionMessage);
+        Assert::string(null, $thunk);
+    }
+
     public function testAnUnknownMethodThrowsABadMethodCall()
     {
         $this->expectException('\BadMethodCallException');
