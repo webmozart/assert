@@ -22,6 +22,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -39,6 +41,8 @@ trait Mixin
      * @psalm-assert iterable<string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -62,6 +66,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -84,6 +90,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return non-empty-string|null
      *
      * @throws InvalidArgumentException
@@ -101,6 +109,8 @@ trait Mixin
      * @psalm-assert iterable<non-empty-string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<non-empty-string>
      *
@@ -124,6 +134,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<non-empty-string|null>
      *
      * @throws InvalidArgumentException
@@ -146,6 +158,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return int|null
      *
      * @throws InvalidArgumentException
@@ -163,6 +177,8 @@ trait Mixin
      * @psalm-assert iterable<int> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<int>
      *
@@ -186,6 +202,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<int|null>
      *
      * @throws InvalidArgumentException
@@ -208,6 +226,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return numeric|null
      *
      * @throws InvalidArgumentException
@@ -225,6 +245,8 @@ trait Mixin
      * @psalm-assert iterable<numeric> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<numeric>
      *
@@ -248,6 +270,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<numeric|null>
      *
      * @throws InvalidArgumentException
@@ -270,6 +294,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return positive-int|null
      *
      * @throws InvalidArgumentException
@@ -287,6 +313,8 @@ trait Mixin
      * @psalm-assert iterable<positive-int> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<positive-int>
      *
@@ -310,6 +338,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<positive-int|null>
      *
      * @throws InvalidArgumentException
@@ -332,6 +362,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return non-negative-int|null
      *
      * @throws InvalidArgumentException
@@ -349,6 +381,8 @@ trait Mixin
      * @psalm-assert iterable<non-negative-int> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<non-negative-int>
      *
@@ -372,6 +406,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<non-negative-int|null>
      *
      * @throws InvalidArgumentException
@@ -394,6 +430,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return negative-int|null
      *
      * @throws InvalidArgumentException
@@ -411,6 +449,8 @@ trait Mixin
      * @psalm-assert iterable<negative-int> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<negative-int>
      *
@@ -434,6 +474,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<negative-int|null>
      *
      * @throws InvalidArgumentException
@@ -456,6 +498,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return float|null
      *
      * @throws InvalidArgumentException
@@ -473,6 +517,8 @@ trait Mixin
      * @psalm-assert iterable<float> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<float>
      *
@@ -496,6 +542,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<float|null>
      *
      * @throws InvalidArgumentException
@@ -518,6 +566,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return numeric|null
      *
      * @throws InvalidArgumentException
@@ -535,6 +585,8 @@ trait Mixin
      * @psalm-assert iterable<numeric> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<numeric>
      *
@@ -558,6 +610,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<numeric|null>
      *
      * @throws InvalidArgumentException
@@ -580,6 +634,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return positive-int|0|null
      *
      * @throws InvalidArgumentException
@@ -597,6 +653,8 @@ trait Mixin
      * @psalm-assert iterable<positive-int|0> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<positive-int|0>
      *
@@ -620,6 +678,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<positive-int|0|null>
      *
      * @throws InvalidArgumentException
@@ -642,6 +702,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return bool|null
      *
      * @throws InvalidArgumentException
@@ -659,6 +721,8 @@ trait Mixin
      * @psalm-assert iterable<bool> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<bool>
      *
@@ -682,6 +746,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<bool|null>
      *
      * @throws InvalidArgumentException
@@ -704,6 +770,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return scalar|null
      *
      * @throws InvalidArgumentException
@@ -721,6 +789,8 @@ trait Mixin
      * @psalm-assert iterable<scalar> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<scalar>
      *
@@ -744,6 +814,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<scalar|null>
      *
      * @throws InvalidArgumentException
@@ -766,6 +838,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return object|null
      *
      * @throws InvalidArgumentException
@@ -783,6 +857,8 @@ trait Mixin
      * @psalm-assert iterable<object> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object>
      *
@@ -806,6 +882,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<object|null>
      *
      * @throws InvalidArgumentException
@@ -828,6 +906,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return object|class-string|null
      *
      * @throws InvalidArgumentException
@@ -845,6 +925,8 @@ trait Mixin
      * @psalm-assert iterable<object|class-string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object|class-string>
      *
@@ -867,6 +949,8 @@ trait Mixin
      * @psalm-assert iterable<object|class-string|null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object|class-string|null>
      *
@@ -892,6 +976,8 @@ trait Mixin
      *
      * @see https://www.php.net/manual/en/function.get-resource-type.php
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return resource|null
      *
      * @throws InvalidArgumentException
@@ -911,6 +997,8 @@ trait Mixin
      * @param string|callable():string $message
      *
      * @see https://www.php.net/manual/en/function.get-resource-type.php
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<resource>
      *
@@ -936,6 +1024,8 @@ trait Mixin
      *
      * @see https://www.php.net/manual/en/function.get-resource-type.php
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<resource|null>
      *
      * @throws InvalidArgumentException
@@ -958,6 +1048,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return callable|null
      *
      * @throws InvalidArgumentException
@@ -975,6 +1067,8 @@ trait Mixin
      * @psalm-assert iterable<callable> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<callable>
      *
@@ -998,6 +1092,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<callable|null>
      *
      * @throws InvalidArgumentException
@@ -1020,6 +1116,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return array|null
      *
      * @throws InvalidArgumentException
@@ -1037,6 +1135,8 @@ trait Mixin
      * @psalm-assert iterable<array> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<array>
      *
@@ -1060,6 +1160,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<array|null>
      *
      * @throws InvalidArgumentException
@@ -1082,6 +1184,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return array|ArrayAccess|null
      *
      * @throws InvalidArgumentException
@@ -1099,6 +1203,8 @@ trait Mixin
      * @psalm-assert iterable<array|ArrayAccess> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<array|ArrayAccess>
      *
@@ -1122,6 +1228,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<array|ArrayAccess|null>
      *
      * @throws InvalidArgumentException
@@ -1144,6 +1252,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return countable|null
      *
      * @throws InvalidArgumentException
@@ -1161,6 +1271,8 @@ trait Mixin
      * @psalm-assert iterable<countable> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<countable>
      *
@@ -1184,6 +1296,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<countable|null>
      *
      * @throws InvalidArgumentException
@@ -1206,6 +1320,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable|null
      *
      * @throws InvalidArgumentException
@@ -1223,6 +1339,8 @@ trait Mixin
      * @psalm-assert iterable<iterable> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<iterable>
      *
@@ -1245,6 +1363,8 @@ trait Mixin
      * @psalm-assert iterable<iterable|null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<iterable|null>
      *
@@ -1270,6 +1390,8 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -1289,6 +1411,8 @@ trait Mixin
      *
      * @param class-string<T>          $class
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -1314,6 +1438,8 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -1335,6 +1461,10 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return object|null
      *
      * @throws InvalidArgumentException
@@ -1351,6 +1481,10 @@ trait Mixin
      *
      * @param class-string<T>          $class
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object>
      *
@@ -1374,6 +1508,10 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<object|null>
      *
      * @throws InvalidArgumentException
@@ -1396,6 +1534,10 @@ trait Mixin
      * @param iterable<class-string<T>> $classes
      * @param string|callable():string  $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -1413,6 +1555,10 @@ trait Mixin
      *
      * @param iterable<class-string<T>> $classes
      * @param string|callable():string  $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -1436,6 +1582,10 @@ trait Mixin
      * @param iterable<class-string<T>> $classes
      * @param string|callable():string  $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -1458,6 +1608,10 @@ trait Mixin
      * @param T|null                   $value
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -1475,6 +1629,10 @@ trait Mixin
      *
      * @param iterable<T>              $value
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -1497,6 +1655,10 @@ trait Mixin
      *
      * @param iterable<T>              $value
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -1522,6 +1684,8 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|class-string<T>|null
      *
      * @throws InvalidArgumentException
@@ -1541,6 +1705,8 @@ trait Mixin
      *
      * @param class-string<T>          $class
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T|class-string<T>>
      *
@@ -1566,6 +1732,8 @@ trait Mixin
      * @param class-string<T>          $class
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T|class-string<T>|null>
      *
      * @throws InvalidArgumentException
@@ -1589,6 +1757,8 @@ trait Mixin
      * @param T|null                   $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return object|class-string|null
      *
      * @throws InvalidArgumentException
@@ -1607,6 +1777,8 @@ trait Mixin
      *
      * @param iterable<T>              $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object|class-string>
      *
@@ -1631,6 +1803,8 @@ trait Mixin
      *
      * @param iterable<T>              $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<object|class-string|null>
      *
@@ -1657,6 +1831,8 @@ trait Mixin
      * @param array<class-string<T>>   $classes
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -1677,6 +1853,8 @@ trait Mixin
      *
      * @param array<class-string<T>>   $classes
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -1703,6 +1881,8 @@ trait Mixin
      * @param array<class-string<T>>   $classes
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -1725,6 +1905,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return empty
      *
      * @throws InvalidArgumentException
@@ -1742,6 +1924,8 @@ trait Mixin
      * @psalm-assert iterable<empty> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<empty>
      *
@@ -1765,6 +1949,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<empty|null>
      *
      * @throws InvalidArgumentException
@@ -1785,6 +1971,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -1800,6 +1988,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -1823,6 +2013,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<!empty|null>
      *
      * @throws InvalidArgumentException
@@ -1844,6 +2036,8 @@ trait Mixin
      * @psalm-assert iterable<null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<null>
      *
@@ -1868,6 +2062,8 @@ trait Mixin
      * @param iterable<T|null>         $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -1890,6 +2086,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return true|null
      *
      * @throws InvalidArgumentException
@@ -1907,6 +2105,8 @@ trait Mixin
      * @psalm-assert iterable<true> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<true>
      *
@@ -1930,6 +2130,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<true|null>
      *
      * @throws InvalidArgumentException
@@ -1952,6 +2154,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return false|null
      *
      * @throws InvalidArgumentException
@@ -1969,6 +2173,8 @@ trait Mixin
      * @psalm-assert iterable<false> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<false>
      *
@@ -1991,6 +2197,8 @@ trait Mixin
      * @psalm-assert iterable<false|null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<false|null>
      *
@@ -2015,6 +2223,8 @@ trait Mixin
      * @param T|false|null             $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -2033,6 +2243,8 @@ trait Mixin
      *
      * @param iterable<T|false>        $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<T>
      *
@@ -2059,6 +2271,8 @@ trait Mixin
      * @param iterable<T|false|null>   $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -2080,6 +2294,8 @@ trait Mixin
      * @param string|null              $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -2096,6 +2312,8 @@ trait Mixin
      *
      * @param iterable<string>         $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -2118,6 +2336,8 @@ trait Mixin
      * @param iterable<string|null>    $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -2139,6 +2359,8 @@ trait Mixin
      * @param string|null              $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -2155,6 +2377,8 @@ trait Mixin
      *
      * @param iterable<string>         $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -2177,6 +2401,8 @@ trait Mixin
      * @param iterable<string|null>    $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -2198,6 +2424,8 @@ trait Mixin
      * @param string|null              $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -2214,6 +2442,8 @@ trait Mixin
      *
      * @param iterable<string>         $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -2236,6 +2466,8 @@ trait Mixin
      * @param iterable<string|null>    $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -2257,6 +2489,8 @@ trait Mixin
      * @param string|null              $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -2273,6 +2507,8 @@ trait Mixin
      *
      * @param iterable<string>         $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -2295,6 +2531,8 @@ trait Mixin
      * @param iterable<string|null>    $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -2315,6 +2553,10 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($values) -> return
+     *
      * @return array|null
      *
      * @throws InvalidArgumentException
@@ -2330,6 +2572,10 @@ trait Mixin
      * @psalm-assert iterable<array> $values
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($values) -> return
      *
      * @return iterable<array>
      *
@@ -2351,6 +2597,10 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($values) -> return
+     *
      * @return iterable<array|null>
      *
      * @throws InvalidArgumentException
@@ -2369,6 +2619,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2382,6 +2636,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2401,6 +2659,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2419,6 +2681,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2432,6 +2698,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2450,6 +2720,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2471,6 +2745,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2486,6 +2762,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2507,6 +2785,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2527,6 +2807,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2542,6 +2824,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2563,6 +2847,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2583,6 +2869,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2598,6 +2886,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2619,6 +2909,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2639,6 +2931,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2654,6 +2948,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2675,6 +2971,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2695,6 +2993,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2710,6 +3010,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2731,6 +3033,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2751,6 +3055,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2766,6 +3072,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2787,6 +3095,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2807,6 +3117,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2822,6 +3134,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2843,6 +3157,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2863,6 +3179,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2878,6 +3196,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2899,6 +3219,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2919,6 +3241,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2934,6 +3258,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -2955,6 +3281,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -2975,6 +3303,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -2990,6 +3320,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -3011,6 +3343,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -3031,6 +3365,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return mixed
      *
      * @throws InvalidArgumentException
@@ -3046,6 +3382,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable
      *
@@ -3067,6 +3405,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable
      *
      * @throws InvalidArgumentException
@@ -3087,6 +3427,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3102,6 +3444,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3123,6 +3467,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3143,6 +3489,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3158,6 +3506,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3179,6 +3529,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3199,6 +3551,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3214,6 +3568,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3235,6 +3591,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3255,6 +3613,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3270,6 +3630,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3291,6 +3653,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3311,6 +3675,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3326,6 +3692,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3347,6 +3715,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3367,6 +3737,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3382,6 +3754,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3403,6 +3777,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3423,6 +3799,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3438,6 +3816,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3459,6 +3839,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3479,6 +3861,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3494,6 +3878,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3515,6 +3901,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3535,6 +3923,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3550,6 +3940,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3571,6 +3963,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3591,6 +3985,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3606,6 +4002,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3627,6 +4025,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3647,6 +4047,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3662,6 +4064,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3683,6 +4087,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3703,6 +4109,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3718,6 +4126,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3739,6 +4149,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3759,6 +4171,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3774,6 +4188,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3795,6 +4211,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3815,6 +4233,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3830,6 +4250,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3850,6 +4272,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string|null>
      *
@@ -3873,6 +4297,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return lowercase-string|null
      *
      * @throws InvalidArgumentException
@@ -3890,6 +4316,8 @@ trait Mixin
      * @psalm-assert iterable<lowercase-string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<lowercase-string>
      *
@@ -3913,6 +4341,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<lowercase-string|null>
      *
      * @throws InvalidArgumentException
@@ -3933,6 +4363,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -3948,6 +4380,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -3971,6 +4405,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -3991,6 +4427,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4006,6 +4444,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4027,6 +4467,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4047,6 +4489,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4062,6 +4506,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4083,6 +4529,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4103,6 +4551,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4118,6 +4568,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4139,6 +4591,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4159,6 +4613,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4174,6 +4630,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4195,6 +4653,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4213,6 +4673,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4226,6 +4690,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4245,6 +4713,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4263,6 +4735,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4276,6 +4752,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4295,6 +4775,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4313,6 +4797,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4326,6 +4814,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4345,6 +4837,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4363,6 +4859,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4376,6 +4876,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4395,6 +4899,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<string|null>
      *
      * @throws InvalidArgumentException
@@ -4413,6 +4921,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -4426,6 +4938,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -4444,6 +4960,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string|null>
      *
@@ -4465,6 +4985,10 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return class-string|null
      *
      * @throws InvalidArgumentException
@@ -4480,6 +5004,10 @@ trait Mixin
      * @psalm-assert iterable<class-string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string>
      *
@@ -4500,6 +5028,10 @@ trait Mixin
      * @psalm-assert iterable<class-string|null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string|null>
      *
@@ -4525,6 +5057,8 @@ trait Mixin
      * @param class-string<ExpectedType> $class
      * @param string|callable():string   $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return class-string<ExpectedType>|null
      *
      * @throws InvalidArgumentException
@@ -4544,6 +5078,8 @@ trait Mixin
      *
      * @param class-string<ExpectedType> $class
      * @param string|callable():string   $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string<ExpectedType>>
      *
@@ -4569,6 +5105,8 @@ trait Mixin
      * @param class-string<ExpectedType> $class
      * @param string|callable():string   $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<class-string<ExpectedType>|null>
      *
      * @throws InvalidArgumentException
@@ -4589,6 +5127,10 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
+     *
      * @return class-string|null
      *
      * @throws InvalidArgumentException
@@ -4604,6 +5146,10 @@ trait Mixin
      * @psalm-assert iterable<class-string> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string>
      *
@@ -4624,6 +5170,10 @@ trait Mixin
      * @psalm-assert iterable<class-string|null> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string|null>
      *
@@ -4649,6 +5199,8 @@ trait Mixin
      * @param class-string<ExpectedType> $interface
      * @param string|callable():string   $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return class-string<ExpectedType>|ExpectedType|null
      *
      * @throws InvalidArgumentException
@@ -4668,6 +5220,8 @@ trait Mixin
      *
      * @param class-string<ExpectedType> $interface
      * @param string|callable():string   $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<class-string<ExpectedType>|ExpectedType>
      *
@@ -4693,6 +5247,8 @@ trait Mixin
      * @param class-string<ExpectedType> $interface
      * @param string|callable():string   $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<class-string<ExpectedType>|ExpectedType|null>
      *
      * @throws InvalidArgumentException
@@ -4716,6 +5272,8 @@ trait Mixin
      * @param T|null                   $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -4734,6 +5292,8 @@ trait Mixin
      *
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($classOrObject) -> return
      *
      * @return iterable<T>
      *
@@ -4758,6 +5318,8 @@ trait Mixin
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -4781,6 +5343,8 @@ trait Mixin
      * @param T|null                   $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -4799,6 +5363,8 @@ trait Mixin
      *
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($classOrObject) -> return
      *
      * @return iterable<T>
      *
@@ -4823,6 +5389,8 @@ trait Mixin
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -4846,6 +5414,8 @@ trait Mixin
      * @param T|null                   $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -4864,6 +5434,8 @@ trait Mixin
      *
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($classOrObject) -> return
      *
      * @return iterable<T>
      *
@@ -4888,6 +5460,8 @@ trait Mixin
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -4911,6 +5485,8 @@ trait Mixin
      * @param T|null                   $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -4929,6 +5505,8 @@ trait Mixin
      *
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($classOrObject) -> return
      *
      * @return iterable<T>
      *
@@ -4953,6 +5531,8 @@ trait Mixin
      * @param iterable<T>              $classOrObject
      * @param string|callable():string $message
      *
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @return iterable<T>
      *
      * @throws InvalidArgumentException
@@ -4974,6 +5554,8 @@ trait Mixin
      * @param string|int               $key
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return array|null
      *
      * @throws InvalidArgumentException
@@ -4990,6 +5572,8 @@ trait Mixin
      *
      * @param string|int               $key
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<array>
      *
@@ -5012,6 +5596,8 @@ trait Mixin
      * @param string|int               $key
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<array|null>
      *
      * @throws InvalidArgumentException
@@ -5033,6 +5619,8 @@ trait Mixin
      * @param iterable<string|int>     $keys
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return array|null
      *
      * @throws InvalidArgumentException
@@ -5049,6 +5637,8 @@ trait Mixin
      *
      * @param iterable<string|int>     $keys
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<array>
      *
@@ -5071,6 +5661,8 @@ trait Mixin
      * @param iterable<string|int>     $keys
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<array|null>
      *
      * @throws InvalidArgumentException
@@ -5092,6 +5684,8 @@ trait Mixin
      * @param string|int               $key
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return array|null
      *
      * @throws InvalidArgumentException
@@ -5108,6 +5702,8 @@ trait Mixin
      *
      * @param string|int               $key
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<array>
      *
@@ -5129,6 +5725,8 @@ trait Mixin
      *
      * @param string|int               $key
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<array|null>
      *
@@ -5152,6 +5750,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return array-key|null
      *
      * @throws InvalidArgumentException
@@ -5169,6 +5769,8 @@ trait Mixin
      * @psalm-assert iterable<array-key> $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<array-key>
      *
@@ -5192,6 +5794,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return iterable<array-key|null>
      *
      * @throws InvalidArgumentException
@@ -5210,6 +5814,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return Countable|array|null
      *
      * @throws InvalidArgumentException
@@ -5223,6 +5831,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<Countable|array>
      *
@@ -5242,6 +5854,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<Countable|array|null>
      *
      * @throws InvalidArgumentException
@@ -5260,6 +5876,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return Countable|array|null
      *
      * @throws InvalidArgumentException
@@ -5273,6 +5893,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<Countable|array>
      *
@@ -5292,6 +5916,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<Countable|array|null>
      *
      * @throws InvalidArgumentException
@@ -5310,6 +5938,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return Countable|array|null
      *
      * @throws InvalidArgumentException
@@ -5323,6 +5955,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<Countable|array>
      *
@@ -5342,6 +5978,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<Countable|array|null>
      *
      * @throws InvalidArgumentException
@@ -5360,6 +6000,10 @@ trait Mixin
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
+     *
      * @return Countable|array|null
      *
      * @throws InvalidArgumentException
@@ -5373,6 +6017,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<Countable|array>
      *
@@ -5391,6 +6039,10 @@ trait Mixin
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<Countable|array|null>
      *
@@ -5414,6 +6066,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return list<mixed>|null
      *
      * @throws InvalidArgumentException
@@ -5431,6 +6085,8 @@ trait Mixin
      * @psalm-assert iterable<list<mixed>> $array
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<list<mixed>>
      *
@@ -5454,6 +6110,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<list<mixed>|null>
      *
      * @throws InvalidArgumentException
@@ -5476,6 +6134,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return non-empty-list<mixed>|null
      *
      * @throws InvalidArgumentException
@@ -5493,6 +6153,8 @@ trait Mixin
      * @psalm-assert iterable<non-empty-list<mixed>> $array
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<non-empty-list<mixed>>
      *
@@ -5515,6 +6177,8 @@ trait Mixin
      * @psalm-assert iterable<non-empty-list<mixed>|null> $array
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<non-empty-list<mixed>|null>
      *
@@ -5540,6 +6204,8 @@ trait Mixin
      * @param mixed|array<array-key, T>|null $array
      * @param string|callable():string       $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return array<string, T>|null
      *
      * @throws InvalidArgumentException
@@ -5559,6 +6225,8 @@ trait Mixin
      *
      * @param iterable<mixed|array<array-key, T>> $array
      * @param string|callable():string            $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<array<string, T>>
      *
@@ -5584,6 +6252,8 @@ trait Mixin
      * @param iterable<mixed|array<array-key, T>|null> $array
      * @param string|callable():string                 $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<array<string, T>|null>
      *
      * @throws InvalidArgumentException
@@ -5603,6 +6273,10 @@ trait Mixin
      * @param callable|null            $callable
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
+     *
      * @return Closure|callable-string|null
      *
      * @throws InvalidArgumentException
@@ -5617,6 +6291,10 @@ trait Mixin
     /**
      * @param iterable<callable>       $callable
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
      *
      * @return iterable<Closure|callable-string>
      *
@@ -5637,6 +6315,10 @@ trait Mixin
      * @param iterable<callable|null>  $callable
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
+     *
      * @return iterable<Closure|callable-string|null>
      *
      * @throws InvalidArgumentException
@@ -5656,6 +6338,10 @@ trait Mixin
      * @param callable|null            $callable
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
+     *
      * @return Closure|callable-string|null
      *
      * @throws InvalidArgumentException
@@ -5670,6 +6356,10 @@ trait Mixin
     /**
      * @param iterable<callable>       $callable
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
      *
      * @return iterable<Closure|callable-string>
      *
@@ -5689,6 +6379,10 @@ trait Mixin
     /**
      * @param iterable<callable|null>  $callable
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($callable) -> return
      *
      * @return iterable<Closure|callable-string|null>
      *
@@ -5713,6 +6407,8 @@ trait Mixin
      * @param array<string, T>|null    $array
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return non-empty-array<string, T>|null
      *
      * @throws InvalidArgumentException
@@ -5731,6 +6427,8 @@ trait Mixin
      *
      * @param iterable<array<string, T>> $array
      * @param string|callable():string   $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @return iterable<non-empty-array<string, T>>
      *
@@ -5757,6 +6455,8 @@ trait Mixin
      * @param iterable<array<string, T>|null> $array
      * @param string|callable():string        $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @return iterable<non-empty-array<string, T>|null>
      *
      * @throws InvalidArgumentException
@@ -5777,6 +6477,8 @@ trait Mixin
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @return string|null
      *
      * @throws InvalidArgumentException
@@ -5792,6 +6494,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string>
      *
@@ -5812,6 +6516,8 @@ trait Mixin
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @return iterable<string|null>
      *
@@ -5835,6 +6541,10 @@ trait Mixin
      * @param class-string<Throwable>  $class
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($expression) -> return
+     *
      * @return T|null
      *
      * @throws InvalidArgumentException
@@ -5852,6 +6562,10 @@ trait Mixin
      * @param iterable<T>              $expression
      * @param class-string<Throwable>  $class
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($expression) -> return
      *
      * @return iterable<T>
      *
@@ -5874,6 +6588,10 @@ trait Mixin
      * @param iterable<T>              $expression
      * @param class-string<Throwable>  $class
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     *
+     * @psalm-flow ($expression) -> return
      *
      * @return iterable<T>
      *

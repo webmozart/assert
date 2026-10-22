@@ -40,6 +40,8 @@ class Assert
      * @psalm-assert string $value
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function string(mixed $value, string|callable $message = ''): string
@@ -64,6 +66,8 @@ class Assert
      *
      * @return non-empty-string
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function stringNotEmpty(mixed $value, string|callable $message = ''): string
@@ -80,6 +84,8 @@ class Assert
      * @psalm-assert int $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -101,6 +107,8 @@ class Assert
      *
      * @psalm-assert numeric $value
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -126,6 +134,8 @@ class Assert
      *
      * @return positive-int
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function positiveInteger(mixed $value, string|callable $message = ''): int
@@ -149,6 +159,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return non-negative-int
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -174,6 +186,8 @@ class Assert
      *
      * @return negative-int
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function negativeInteger(mixed $value, string|callable $message = ''): int
@@ -198,6 +212,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function float(mixed $value, string|callable $message = ''): float
@@ -219,6 +235,8 @@ class Assert
      * @psalm-assert numeric $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -244,6 +262,8 @@ class Assert
      *
      * @return positive-int|0
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function natural(mixed $value, string|callable $message = ''): int
@@ -265,6 +285,8 @@ class Assert
      * @psalm-assert bool $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -288,6 +310,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function scalar(mixed $value, string|callable $message = ''): int|bool|float|string
@@ -309,6 +333,8 @@ class Assert
      * @psalm-assert object $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -333,6 +359,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return object|class-string
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -368,6 +396,8 @@ class Assert
      *
      * @return resource
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function resource(mixed $value, ?string $type = null, string|callable $message = ''): mixed
@@ -400,6 +430,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isInitialized(mixed $value, string $property, string|callable $message = ''): object
@@ -426,6 +458,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isCallable(mixed $value, string|callable $message = ''): callable
@@ -447,6 +481,8 @@ class Assert
      * @psalm-assert array $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -470,6 +506,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isArrayAccessible(mixed $value, string|callable $message = ''): array|ArrayAccess
@@ -492,6 +530,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isCountable(mixed $value, string|callable $message = ''): array|Countable
@@ -513,6 +553,8 @@ class Assert
      * @psalm-assert iterable $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -541,6 +583,8 @@ class Assert
      *
      * @return T
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isInstanceOf(mixed $value, mixed $class, string|callable $message = ''): object
@@ -566,6 +610,9 @@ class Assert
      *
      * @param string|callable():string $message
      * @param class-string<T> $class
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -594,6 +641,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -626,6 +676,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -661,6 +714,8 @@ class Assert
      *
      * @return T|class-string<T>
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isAOf(mixed $value, mixed $class, string|callable $message = ''): object|string
@@ -690,6 +745,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return object|class-string
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -721,6 +778,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isAnyOf(mixed $value, mixed $classes, string|callable $message = ''): object|string
@@ -753,6 +812,8 @@ class Assert
      *
      * @return empty
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isEmpty(mixed $value, string|callable $message = ''): mixed
@@ -775,6 +836,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notEmpty(mixed $value, string|callable $message = ''): mixed
@@ -796,6 +859,8 @@ class Assert
      * @psalm-assert null $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -822,6 +887,8 @@ class Assert
      * @template T
      * @param T|null $value
      * @return T
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notNull(mixed $value, string|callable $message = ''): mixed
@@ -842,6 +909,8 @@ class Assert
      * @psalm-assert true $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -864,6 +933,8 @@ class Assert
      * @psalm-assert false $value
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -890,6 +961,8 @@ class Assert
      * @template T
      * @param T|false $value
      * @return T
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notFalse(mixed $value, string|callable $message = ''): mixed
@@ -909,6 +982,8 @@ class Assert
      *
      * @param string|callable():string $message
      * @param string $value
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -933,6 +1008,8 @@ class Assert
      * @param string|callable():string $message
      * @param string $value
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function ipv4(mixed $value, string|callable $message = ''): string
@@ -956,6 +1033,8 @@ class Assert
      * @param string|callable():string $message
      * @param string $value
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function ipv6(mixed $value, string|callable $message = ''): string
@@ -978,6 +1057,8 @@ class Assert
      *
      * @param string|callable():string $message
      * @param string $value
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1003,6 +1084,9 @@ class Assert
      * @psalm-assert array $values
      *
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($values) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1030,6 +1114,9 @@ class Assert
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function eq(mixed $value, mixed $expect, string|callable $message = ''): mixed
@@ -1048,6 +1135,9 @@ class Assert
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1068,6 +1158,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1090,6 +1182,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notSame(mixed $value, mixed $expect, string|callable $message = ''): mixed
@@ -1109,6 +1203,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1131,6 +1227,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function greaterThanEq(mixed $value, mixed $limit, string|callable $message = ''): mixed
@@ -1152,6 +1250,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function lessThan(mixed $value, mixed $limit, string|callable $message = ''): mixed
@@ -1172,6 +1272,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1195,6 +1297,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1220,6 +1324,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function oneOf(mixed $value, mixed $values, string|callable $message = ''): mixed
@@ -1235,6 +1341,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1261,6 +1369,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notOneOf(mixed $value, mixed $values, string|callable $message = ''): mixed
@@ -1279,6 +1389,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1302,6 +1414,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1327,6 +1441,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notContains(mixed $value, mixed $subString, string|callable $message = ''): string
@@ -1351,6 +1467,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notWhitespaceOnly(mixed $value, string|callable $message = ''): string
@@ -1372,6 +1490,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1397,6 +1517,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function notStartsWith(mixed $value, mixed $prefix, string|callable $message = ''): string
@@ -1420,6 +1542,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1452,6 +1576,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function endsWith(mixed $value, mixed $suffix, string|callable $message = ''): string
@@ -1475,6 +1601,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1500,6 +1628,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function regex(mixed $value, mixed $pattern, string|callable $message = ''): string
@@ -1522,6 +1652,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1548,6 +1680,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function unicodeLetters(mixed $value, string|callable $message = ''): string
@@ -1569,6 +1703,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1597,6 +1733,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function digits(mixed $value, string|callable $message = ''): string
@@ -1623,6 +1761,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1655,6 +1795,8 @@ class Assert
      *
      * @return lowercase-string
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function lower(mixed $value, string|callable $message = ''): string
@@ -1684,6 +1826,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function upper(mixed $value, string|callable $message = ''): string
@@ -1711,6 +1855,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function length(mixed $value, mixed $length, string|callable $message = ''): string
@@ -1736,6 +1882,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1763,6 +1911,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function maxLength(mixed $value, mixed $max, string|callable $message = ''): string
@@ -1788,6 +1938,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1817,6 +1969,9 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function fileExists(mixed $value, string|callable $message = ''): string
@@ -1836,6 +1991,9 @@ class Assert
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1857,6 +2015,9 @@ class Assert
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function directory(mixed $value, string|callable $message = ''): string
@@ -1877,6 +2038,9 @@ class Assert
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function readable(mixed $value, string|callable $message = ''): string
@@ -1896,6 +2060,9 @@ class Assert
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1920,6 +2087,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return class-string
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -1950,6 +2120,8 @@ class Assert
      *
      * @return class-string<ExpectedType>
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function subclassOf(mixed $value, mixed $class, string|callable $message = ''): string
@@ -1975,6 +2147,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return class-string
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2004,6 +2179,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return class-string<ExpectedType>|ExpectedType
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2035,6 +2212,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function propertyExists(mixed $classOrObject, mixed $property, string|callable $message = ''): object|string
@@ -2060,6 +2239,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function propertyNotExists(mixed $classOrObject, mixed $property, string|callable $message = ''): mixed
@@ -2083,6 +2264,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function methodExists(mixed $classOrObject, mixed $method, string|callable $message = ''): object|string
@@ -2108,6 +2291,8 @@ class Assert
      * @param string|callable():string $message
      *
      * @return T
+     * @psalm-flow ($classOrObject) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function methodNotExists(mixed $classOrObject, mixed $method, string|callable $message = ''): mixed
@@ -2131,6 +2316,8 @@ class Assert
      * @param string|int $key
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function keyExists(mixed $array, string|int $key, string|callable $message = ''): array
@@ -2153,6 +2340,8 @@ class Assert
      *
      * @param iterable<string|int> $keys
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($array) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2188,6 +2377,8 @@ class Assert
      * @param string|int $key
      * @param string|callable():string $message
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function keyNotExists(mixed $array, string|int $key, string|callable $message = ''): array
@@ -2214,6 +2405,8 @@ class Assert
      *
      * @param string|callable():string $message
      *
+     * @psalm-flow ($value) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function validArrayKey(mixed $value, string|callable $message = ''): string|int
@@ -2231,6 +2424,9 @@ class Assert
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($array) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2255,6 +2451,9 @@ class Assert
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function minCount(mixed $array, mixed $min, string|callable $message = ''): array|Countable
@@ -2277,6 +2476,9 @@ class Assert
     /**
      * @param string|callable():string $message
      *
+     * @psalm-taint-specialize
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function maxCount(mixed $array, mixed $max, string|callable $message = ''): array|Countable
@@ -2298,6 +2500,9 @@ class Assert
 
     /**
      * @param string|callable():string $message
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($array) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2331,6 +2536,8 @@ class Assert
      *
      * @return list<mixed>
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isList(mixed $array, string|callable $message = ''): array
@@ -2354,6 +2561,8 @@ class Assert
      *
      * @return non-empty-list<mixed>
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isNonEmptyList(mixed $array, string|callable $message = ''): array
@@ -2376,6 +2585,8 @@ class Assert
      *
      * @return array<string, T>
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isMap(mixed $array, string|callable $message = ''): array
@@ -2397,6 +2608,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return Closure|callable-string
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($callable) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2423,6 +2637,9 @@ class Assert
      * @param string|callable():string $message
      *
      * @return Closure|callable-string
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($callable) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2457,6 +2674,8 @@ class Assert
      *
      * @return non-empty-array<string, T>
      *
+     * @psalm-flow ($array) -> return
+     *
      * @throws InvalidArgumentException
      */
     public static function isNonEmptyMap(mixed $array, string|callable $message = ''): array
@@ -2471,6 +2690,8 @@ class Assert
      * @psalm-pure
      *
      * @param string|callable():string $message
+     *
+     * @psalm-flow ($value) -> return
      *
      * @throws InvalidArgumentException
      */
@@ -2515,6 +2736,9 @@ class Assert
      * @param class-string<Throwable> $class
      *
      * @return T
+     *
+     * @psalm-taint-specialize
+     * @psalm-flow ($expression) -> return
      *
      * @throws InvalidArgumentException
      */
