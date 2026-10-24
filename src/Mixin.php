@@ -2861,9 +2861,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return mixed
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return TAllowed|null
      *
      * @throws InvalidArgumentException
      */
@@ -2877,9 +2880,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return iterable
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return iterable<TAllowed>
      *
      * @throws InvalidArgumentException
      */
@@ -2897,9 +2903,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return iterable
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return iterable<TAllowed|null>
      *
      * @throws InvalidArgumentException
      */
@@ -2917,9 +2926,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return mixed
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return TAllowed|null
      *
      * @throws InvalidArgumentException
      */
@@ -2933,9 +2945,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return iterable
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return iterable<TAllowed>
      *
      * @throws InvalidArgumentException
      */
@@ -2953,9 +2968,12 @@ trait Mixin
     /**
      * @psalm-pure
      *
-     * @param string|callable():string $message
+     * @template TAllowed
      *
-     * @return iterable
+     * @param array<array-key, TAllowed> $values
+     * @param string|callable():string   $message
+     *
+     * @return iterable<TAllowed|null>
      *
      * @throws InvalidArgumentException
      */
